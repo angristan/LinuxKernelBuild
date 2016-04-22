@@ -4,7 +4,7 @@ LINUX_VER=4.4.8
 GRSEC_VER=3.1-4.4.8-201604201957
 
 # Dependencies
-apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc liblz4-tool kernel-package gcc-4.9-plugin-dev ca-certificates wget
+apt-get install -y git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc liblz4-tool kernel-package gcc-4.9-plugin-dev ca-certificates wget
 
 # Source
 cd /opt
