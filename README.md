@@ -1,5 +1,5 @@
 # LinuxKernelBuild
-Sccript to install the latest version of the Linux Kernel from source, with some tweaks and GrSecurity.
+Sccript to install the latest version of the Linux Kernel from source, with some tweaks and GrSecurity. (Works on Debian and Ubuntu)
 
 ### Usage
 
