@@ -4,7 +4,7 @@ LINUX_VER=4.4.8
 GRSEC_VER=3.1-4.4.8-201604201957
 
 # Dependencies
-apt-get install -y git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc liblz4-tool kernel-package gcc-4.9-plugin-dev ca-certificates wget
+apt-get install -y git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc liblz4-tool kernel-package gcc-4.9-plugin-dev ca-certificates wget kexec-tools
 
 # Source
 cd /opt
@@ -29,3 +29,6 @@ make-kpkg --initrd --revision=$(date +%F) kernel_image kernel_headers -j $(nproc
 cd ..
 dpkg -i linux-image-${LINUX_VER}-grsec_$(date +%F)_amd64.deb
 dpkg -i linux-headers-${LINUX_VER}-grsec_$(date +%F)_amd64.deb
+
+# Load the new kernel without reboot
+systemctl kexec
