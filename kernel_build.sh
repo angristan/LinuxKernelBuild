@@ -1,6 +1,7 @@
 #!/bin/bash
 
-LINUX_VER=4.5.2
+LINUX_VER=4.4.8
+GRESEC_VER=3.1-4.4.8-201604201957
 
 # Dependencies
 apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc liblz4-tool kernel-package gcc-4.9-plugin-dev ca-certificates wget
@@ -12,6 +13,10 @@ cd linux
 wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${LINUX_VER}.tar.xz
 tar xvf linux-${LINUX_VER}.tar.xz
 cd linux-${LINUX_VER}
+
+# Grescurity
+wget https://grsecurity.net/test/grsecurity-${GRSEC_VER}.patch
+patch -p1 < grsecurity-${GRSEC_VER}.patch
 
 # Config
 wget https://raw.githubusercontent.com/Angristan/LinuxKernelBuild/master/config -O .config
