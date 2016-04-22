@@ -36,4 +36,4 @@ dpkg -i linux-image-${LINUX_VER}-grsec_$(date +%F)_amd64.deb
 dpkg -i linux-headers-${LINUX_VER}-grsec_$(date +%F)_amd64.deb
 
 # Load the new kernel without reboot
-systemctl kexec
+#systemctl kexec
