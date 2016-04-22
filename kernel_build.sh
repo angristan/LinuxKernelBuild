@@ -27,5 +27,5 @@ make-kpkg --initrd --revision=$(date +%F) kernel_image kernel_headers -j $(nproc
 
 # Installation
 cd ..
-dpkg -i linux-image-${LINUX_VER}_$(date +%F)_amd64.deb
-dpkg -i linux-headers-${LINUX_VER}_$(date +%F)_amd64.deb
+dpkg -i linux-image-${LINUX_VER}-grsec_$(date +%F)_amd64.deb
+dpkg -i linux-headers-${LINUX_VER}-grsec_$(date +%F)_amd64.deb
