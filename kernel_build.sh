@@ -26,7 +26,8 @@ wget https://grsecurity.net/test/grsecurity-${GRSEC_VER}.patch
 patch -p1 < grsecurity-${GRSEC_VER}.patch
 
 # Config
-wget https://raw.githubusercontent.com/Angristan/LinuxKernelBuild/master/config -O .config
+# wget https://raw.githubusercontent.com/Angristan/LinuxKernelBuild/master/config -O .config
+cp /boot/config-$(uname -r) .config
 
 # Compilation
 make-kpkg clean
