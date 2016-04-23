@@ -12,7 +12,7 @@ GCC_VER=$(gcc -dumpversion | cut -c1)
 if [[ $GCC_VER != "5" ]]; then
 	GCC_VER=$(gcc -dumpversion | cut -c1-3)
 fi
-apt-get install gcc-${GCC_VER}-plugin-dev
+apt-get install -y gcc-${GCC_VER}-plugin-dev
 
 cd /opt
 mkdir linux
