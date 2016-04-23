@@ -3,14 +3,17 @@
 # Variables
 LINUX_VER=4.4.8
 GRSEC_VER=3.1-4.4.8-201604201957
+
+# Dependencies
+apt-get install -y git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc liblz4-tool kernel-package \
+ca-certificates wget kexec-tools paxctl
+
+# GCC
 GCC_VER=$(gcc -dumpversion | cut -c1)
 if [[ $GCC_VER != "5" ]]; then
 	GCC_VER=$(gcc -dumpversion | cut -c1-3)
 fi
-
-# Dependencies
-apt-get install -y git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc liblz4-tool kernel-package \
-ca-certificates wget kexec-tools paxctl gcc-${GCC_VER}-plugin-dev
+apt-get install gcc-${GCC_VER}-plugin-dev
 
 cd /opt
 mkdir linux
