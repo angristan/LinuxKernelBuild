@@ -4,7 +4,7 @@
 LINUX_VER=4.5.4
 
 # Dependencies
-apt-get install -y git fakeroot build-essential kernel-packagencurses-dev xz-utils libssl-dev bc liblz4-tool paxctl
+apt-get install -y git fakeroot build-essential kernel-package ncurses-dev xz-utils libssl-dev bc liblz4-tool paxctl
 
 # GCC
 GCC_VER=$(gcc -dumpversion | cut -c1)
