@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Variables
-LINUX_VER=4.4.8
-GRSEC_VER=3.1-4.4.8-201604201957
+LINUX_VER=4.5.4
+GRSEC_VER=3.1-4.5.4-201605131918
 
 # Dependencies
 apt-get install -y git fakeroot build-essential kernel-packagencurses-dev xz-utils libssl-dev bc liblz4-tool paxctl
