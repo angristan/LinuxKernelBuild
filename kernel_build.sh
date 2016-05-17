@@ -22,7 +22,7 @@ cd linux-${LINUX_VER}
 
 # Config
 # wget https://raw.githubusercontent.com/Angristan/LinuxKernelBuild/master/config -O .config
-cp /boot/config-$(uname -r) .config
+#cp /boot/config-$(uname -r) .config
 
 # Compilation
 make-kpkg clean
