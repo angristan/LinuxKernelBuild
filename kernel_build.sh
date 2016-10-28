@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-LINUX_VER=4.5.4
+LINUX_VER=$1
 
 # Dependencies
 apt-get install -y git fakeroot build-essential kernel-package ncurses-dev xz-utils libssl-dev bc liblz4-tool paxctl
@@ -13,15 +13,15 @@ if [[ $GCC_VER != "5" ]]; then
 fi
 apt-get install -y gcc-${GCC_VER}-plugin-dev
 
+# Download Linux source code
 cd /opt
 mkdir linux
 cd linux
-wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${LINUX_VER}.tar.xz
+wget https://cdn.kernel.org/pub/linux/kernel/v$(echo $LINUX_VER | cut -c1).x/linux-${LINUX_VER}.tar.xz
 tar xvf linux-${LINUX_VER}.tar.xz
 cd linux-${LINUX_VER}
 
 # Config
-# wget https://raw.githubusercontent.com/Angristan/LinuxKernelBuild/master/config -O .config
 #cp /boot/config-$(uname -r) .config
 
 # Compilation
