@@ -17,7 +17,7 @@ apt-get install -y gcc-${GCC_VER}-plugin-dev
 cd /opt
 mkdir linux
 cd linux
-wget https://cdn.kernel.org/pub/linux/kernel/v$(echo $LINUX_VER | cut -c1).x/linux-${LINUX_VER}.tar.xz
+wget -c https://cdn.kernel.org/pub/linux/kernel/v$(echo $LINUX_VER | cut -c1).x/linux-${LINUX_VER}.tar.xz
 tar xvf linux-${LINUX_VER}.tar.xz
 cd linux-${LINUX_VER}
 
