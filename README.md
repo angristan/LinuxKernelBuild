@@ -3,7 +3,9 @@ Sccript to install the Linux Kernel from source. (Works on Debian and Ubuntu)
 
 ### Usage
 
-To install the 4.8.5 version :
+It should work with any version.
+
+For instance, to install the 4.8.5 version :
 
 ```
 wget https://raw.githubusercontent.com/Angristan/LinuxKernelBuild/master/kernel_build.sh
