@@ -4,6 +4,7 @@
 LINUX_VER=$1
 
 # Dependencies
+apt-get update
 apt-get install -y git fakeroot build-essential kernel-package ncurses-dev xz-utils libssl-dev bc liblz4-tool paxctl
 
 # GCC
