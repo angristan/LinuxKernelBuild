@@ -23,6 +23,7 @@ cd linux-${LINUX_VER}
 
 # Config
 #cp /boot/config-$(uname -r) .config
+# Just select "Save" here
 make menuconfig
 
 # Compilation
@@ -30,8 +31,8 @@ make deb-pkg -j $(nproc)
 
 # Installation
 cd ..
-dpkg -i linux-image-${LINUX_VER}_${LINUX_VER}-1_amd64.deb
-dpkg -i linux-headers-${LINUX_VER}_${LINUX_VER}-1_amd64.deb
+dpkg -i linux-image-${LINUX_VER}_${LINUX_VER}-*.deb
+dpkg -i linux-headers-${LINUX_VER}_${LINUX_VER}-*.deb
 
 # Cleanup
 rm linux-${LINUX_VER}.tar.xz
