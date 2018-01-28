@@ -7,13 +7,6 @@ LINUX_VER=$1
 apt-get update
 apt-get install -y git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc liblz4-tool paxctl libelf-dev
 
-# GCC
-GCC_VER=$(gcc -dumpversion | cut -c1)
-if [[ $GCC_VER != "5" || $GCC_VER != "6" ]]; then
-	GCC_VER=$(gcc -dumpversion | cut -c1-3)
-fi
-apt-get install -y gcc-${GCC_VER}-plugin-dev
-
 # Download Linux source code
 mkdir /opt/linux
 cd /opt/linux
