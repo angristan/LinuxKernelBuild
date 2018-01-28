@@ -20,7 +20,7 @@ cd linux-${LINUX_VER}
 make menuconfig
 
 # Compilation
-make deb-pkg -j $(nproc)
+make bindeb-pkg -j $(nproc)
 
 # Installation
 cd ..
